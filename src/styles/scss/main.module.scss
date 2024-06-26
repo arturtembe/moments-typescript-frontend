@@ -1,0 +1,120 @@
+
+$d:#ddd;
+$full:100%;
+$full_vh:100vh;
+$b:#000;
+$f:#fff;
+$g:#a56504;
+$l:#f8adad;
+$a:#2aaffc;
+$r:#830505;
+$success:#b0dcfa;
+$bsd:4px 4px 4px 3px $d;
+
+.main{
+    width: $full;
+    height: $full_vh;
+    overflow: hidden;
+    background-color: $d;
+    position: relative;
+}
+
+.section{
+    width: $full;
+    height: $full;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1% 20%;
+    overflow-y: auto;
+    padding-bottom: 10%;
+}
+
+// Moments
+.my_moments{ 
+    background-color: $f;
+    box-shadow: $bsd;
+    border-radius: 10px;
+    width: calc($full - 10%);
+    margin: 5px 50px 10px 50px;
+
+    & .box_usuario{
+        width: $full;
+        padding: 20px 20px 0 20px;
+
+        & h1{
+            word-wrap: break-word;
+            font-size: 19px;
+            font-weight: 700;
+            color: $b;
+        }
+    }
+    & .box_conteudo{
+        font-size: 16px;
+        word-wrap: break-word;
+        padding: 20px;
+        line-height: 19px;
+    }
+
+    & .box_img{
+        width: 100%;
+        height: 300px;
+
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    & .box_controls{
+        width: $full;
+        border-top: 1px solid $d;
+
+        & button{
+            background-color: $f;
+            width: 50%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            border-right: 1px solid $d;
+            color: $b;
+
+            &.active{
+                color: $a;
+            }
+
+            &:hover{
+                cursor: pointer;
+                color: $a;
+            }
+        }
+    }
+}
+
+//Comentario
+.popupComentario{
+    margin-top:-100vh;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:#ddd;
+    opacity:1;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+@media screen and (max-width:900px) {
+    .section{
+        padding: 1% 10%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .section{
+        padding: 1%;
+    }
+}

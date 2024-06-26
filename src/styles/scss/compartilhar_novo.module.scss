@@ -1,0 +1,107 @@
+
+$ddd:#ddd;
+$full:100%;
+$full_vh:100vh;
+$b000:#000;
+$fff:#fff;
+$gold:#f4a228;
+$larang:#f8adad;
+$success:#b0dcfa;
+
+.main{
+    width: $full;
+    height: $full_vh;
+    overflow: hidden;
+}
+
+.section{
+    width: $full;
+    height: $full;
+    background-color: $ddd;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px 100px;
+}
+
+.form{
+    width: $full;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.form label{
+    width: $full;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form textarea{
+    width: $full;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: 1px $ddd solid;
+    outline: none;
+    font-size: 17px;
+    height: 150px;
+}
+
+// File
+.form input{
+    width: $full;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border: 1px $ddd solid;
+    outline: none;
+}
+
+.form button{
+    margin: 20px 0;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: $ddd 1px solid;
+    outline: none;
+    font-size: 20px;
+    color: $fff;
+    font-weight: bold;
+    background-color: $gold;
+}
+
+// msg
+.msg_erro{
+    padding: 10px 40px;
+    background-color: $larang;
+    border-radius: 10px;
+    width: $full;
+    margin: 10px 0;
+    color: $fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.msg_sucesso{
+    padding: 10px 40px;
+    background-color: $success;
+    border-radius: 10px;
+    width: $full;
+    margin: 10px 0;
+    color: $fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+@media screen and (max-width:760px) {
+
+    .section{
+        padding: 50px 0 0 0;
+        justify-content: flex-start;
+    }
+
+}

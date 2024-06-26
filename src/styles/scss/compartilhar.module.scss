@@ -1,0 +1,171 @@
+
+$d:#ddd;
+$full:100%;
+$full_vh:100vh;
+$b:#000;
+$f:#fff;
+$g:#a56504;
+$l:#f8adad;
+$a:#2aaffc;
+$r:#830505;
+$success:#b0dcfa;
+$bsd:4px 4px 4px 3px $d;
+
+.main{
+    width: $full;
+    height: $full_vh;
+    overflow: hidden;
+    background-color: $d;
+}
+
+.section{
+    width: $full;
+    height: $full;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1% 10%;
+    overflow-y: auto;
+    padding-bottom: 10%;
+}
+
+// compartilhar
+.compartilhar{
+    width: $full;
+    box-shadow: $bsd;
+    padding: 20px;
+}
+
+// Addicionar new post
+.btnPost{
+    width: 100%;
+    padding: 30px 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $f;
+
+    & a{
+        padding: 10px;
+        outline: none;
+        border: 1px solid $d;
+        font-size: 18px;
+        color: $b;
+        background-color: $f;
+        border-radius: 10px;
+        width: 100%;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover{
+            background-color: $g;
+            color: $f;
+        }
+    }
+}
+
+// Tab
+.tab_header{
+    border-top: 1px solid $d;
+    width: 100%;
+    background-color: $f;
+    
+    & button{
+        background-color: $f;
+        border: 1px solid $d;
+        color: $b;
+        font-size: 17px;
+        padding: 10px;
+        outline: none;
+        width: 50%;
+        
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    & button.active{
+        border-bottom: 5px solid $g;
+        color: $g;
+        font-weight: 700;
+        font-size: 17px;
+        padding: 10px;
+        outline: none;
+
+        &:hover{
+            cursor: default;
+        }
+    }
+    
+}
+
+// Moments
+.my_moments{ 
+    background-color: $f;
+    box-shadow: $bsd;
+    border-radius: 10px;
+    width: calc($full - 10%);
+    margin: 5px 50px 10px 50px;
+
+    & .box_usuario{
+        width: $full;
+        padding: 20px 20px 0 20px;
+
+        & h1{
+            word-wrap: break-word;
+            font-size: 19px;
+            font-weight: 700;
+            color: $b;
+        }
+    }
+    & .box_conteudo{
+        font-size: 16px;
+        word-wrap: break-word;
+        padding: 20px;
+        line-height: 19px;
+    }
+
+    & .box_img{
+        width: 100%;
+        height: 300px;
+
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    & .box_controls{
+        width: $full;
+        border-top: 1px solid $d;
+
+        & button{
+            background-color: $f;
+            width: 50%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            cursor: pointer;
+            
+            &:nth-child(1){
+                border-right: 1px solid $d;
+                color: $a;
+
+                &:hover{
+                    border-bottom: 3px solid $a;
+                }
+            }
+            &:nth-child(2){
+                color: $r;
+            
+                &:hover{
+                    border-bottom: 3px solid $r;
+                }
+            }
+            
+        }
+    }
+}

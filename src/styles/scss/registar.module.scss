@@ -1,0 +1,125 @@
+
+$ddd:#ddd;
+$full:100%;
+$full_vh:100vh;
+$b000:#000;
+$fff:#fff;
+$gold:#f4a228;
+$larang:#f8adad;
+$success:#b0dcfa;
+
+.main{
+    width: $full;
+    height: $full_vh;
+    overflow: hidden;
+}
+
+.section{
+    width: $full;
+    height: $full;
+    background-color: $ddd;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px 100px;
+}
+
+.form{
+    width: $full;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 10px;
+
+    & .box_form{
+        width: $full;
+        padding: 15px;
+
+        &:nth-child(1){
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+
+            & .box_form input{
+                width: $full;
+                padding: 15px 10px;
+                outline: none;
+                border: 1px $ddd solid;
+                border-radius: 10px;
+                font-size: 17px;
+            }
+        }
+        & input{
+            width: $full;
+            padding: 15px 10px;
+            outline: none;
+            border: 1px $ddd solid;
+            border-radius: 10px;
+            font-size: 17px;
+        }
+
+        &:nth-child(5){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: $full;
+            
+            & button{
+                width: calc($full - 10%);
+                background-color: $fff;
+                color: $b000;
+                border: 1px solid $ddd;
+                outline: none;
+                padding: 15px 10px;
+                border-radius: 10px;
+                margin: 5px;
+                font-size: 19px;
+                font-size: 500;
+        
+                &:hover{
+                    cursor: pointer;
+                    background-color: $gold;
+                    color: $fff;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        & span{
+            display: block;
+            text-align: center;
+            
+            & a{
+                margin-left: 10px;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+}
+
+// msg
+.msg_erro{
+    padding: 10px 40px;
+    background-color: $larang;
+    border-radius: 10px;
+    width: $full;
+    margin: 10px 0;
+    color: $fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.msg_sucesso{
+    padding: 10px 40px;
+    background-color: $success;
+    border-radius: 10px;
+    width: $full;
+    margin: 10px 0;
+    color: $fff;
+    font-size: 17px;
+    font-weight: 700;
+}

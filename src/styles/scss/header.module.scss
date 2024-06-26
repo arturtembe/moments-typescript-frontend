@@ -1,0 +1,99 @@
+
+//  VARIAVEIS
+$b000:#000;
+$wfff:#fff;
+$gold:#ff9501;
+$ddd:#ddd;
+$r:#fb6c6c;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 60px;
+    background-color: $wfff;
+    box-shadow: 4px 4px 4px 3px rgba(225, 225,225, 0.5);
+    position: relative;
+}
+
+.navbar{
+    display: block;
+    
+    & a{
+        padding: 0px 20px;
+        text-decoration: none;
+        color: $b000;
+        font-weight: 500;
+        font-size: 17px;
+
+        &.active{
+            color: $gold;
+        }
+
+        &:nth-child(3){
+            background-color: $r;
+            color: #fff;
+            padding: 10px;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.onclose{
+    display: block;
+}
+
+.icon{
+    display: none;
+
+    & svg{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width:560px) {
+    
+    // Header
+
+    .onclose{
+        display: none;
+    }
+
+    .navbar{
+        // display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 10px 0px;
+        width: 100%;
+        border: 1px sold $b000;
+        
+        & a{
+            color: $b000;
+            display: block;
+            padding: 10px 50px;
+            background-color: $wfff;
+            width: 100%;
+            font-size: 17px;
+            text-align: center;
+            border-bottom: 1px solid $ddd;
+
+            &:hover{
+                background-color: $gold;
+                color: $b000;
+            }
+        }
+    }
+    
+    .icon{
+        display: block;
+
+        & svg:active {
+
+        }
+    }
+}
